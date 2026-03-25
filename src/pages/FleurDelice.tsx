@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductCard from "@/components/ProductCard";
 import ScrollReveal from "@/components/ScrollReveal";
+import WaveDivider from "@/components/WaveDivider";
 
 const products = [
   {
@@ -57,12 +58,12 @@ const products = [
 
 const FleurDelice = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <AnnouncementBar />
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="relative h-80 md:h-96 overflow-hidden">
+      <section className="relative mt-8 mb-5 h-60 sm:h-80 md:h-96 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=1600&q=85"
           alt="Fleur Delice Collection"
@@ -72,7 +73,7 @@ const FleurDelice = () => {
           <p className="font-lato text-xs tracking-[0.35em] uppercase text-blush mb-3 animate-fade-in-up">
             Our Floral Creations
           </p>
-          <h1 className="font-playfair text-5xl md:text-6xl text-primary-foreground animate-fade-in-up">
+          <h1 className="font-playfair text-3xl sm:text-5xl md:text-6xl text-primary-foreground animate-fade-in-up">
             Fleur Delice
           </h1>
           <div className="w-16 h-0.5 bg-blush mt-4 animate-fade-in-up" />
@@ -82,32 +83,43 @@ const FleurDelice = () => {
         </div>
       </section>
 
-      {/* Products Grid */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <ScrollReveal className="text-center mb-12">
-          <p className="font-lato text-xs tracking-[0.3em] uppercase text-mauve mb-2">
-            Handcrafted with Florals
-          </p>
-          <h2 className="font-playfair text-4xl text-foreground">
-            The Collection
-          </h2>
-          <div className="w-12 h-0.5 bg-mauve mx-auto mt-4" />
-        </ScrollReveal>
+      {/* Wave: white → pink */}
+      <WaveDivider height={50} color="#fce4ec" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((p, i) => (
-            <ScrollReveal key={p.name} delay={i * 80}>
-              <ProductCard {...p} />
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
+      {/* Products Grid */}
+      <div style={{ background: "#fce4ec" }}>
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+          <ScrollReveal className="text-center mb-12">
+            <p className="font-lato text-xs tracking-[0.3em] uppercase text-mauve mb-2">
+              Handcrafted with Florals
+            </p>
+            <h2 className="font-playfair text-2xl sm:text-4xl text-foreground">
+              The Collection
+            </h2>
+            <div className="w-12 h-0.5 bg-mauve mx-auto mt-4" />
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            {products.map((p, i) => (
+              <ScrollReveal key={p.name} delay={i * 80}>
+                <ProductCard {...p} category="Fleur Delice" />
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      {/* Wave: pink → white */}
+      <div style={{ background: "#fce4ec" }}>
+        <WaveDivider height={50} color="white" />
+      </div>
 
       {/* CTA Banner */}
-      <section className="bg-secondary py-16 text-center px-6">
+      <WaveDivider height={45} color="#f8bbd0" />
+      <section className="py-10 sm:py-16 text-center px-4 sm:px-6" style={{ background: "#f8bbd0" }}>
         <ScrollReveal>
-          <div className="animate-petal text-4xl mb-4">🌸</div>
-          <h3 className="font-playfair text-3xl text-foreground mb-3">
+          <div className="animate-petal text-3xl sm:text-4xl mb-4">🌸</div>
+          <h3 className="font-playfair text-2xl sm:text-3xl text-foreground mb-3">
             Want something truly bespoke?
           </h3>
           <p className="font-lato text-sm text-muted-foreground mb-6 max-w-md mx-auto">
@@ -121,6 +133,9 @@ const FleurDelice = () => {
           </a>
         </ScrollReveal>
       </section>
+      <div style={{ background: "#f8bbd0" }}>
+        <WaveDivider height={45} color="white" />
+      </div>
 
       <Footer />
     </div>

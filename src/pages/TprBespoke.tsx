@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductCard from "@/components/ProductCard";
 import ScrollReveal from "@/components/ScrollReveal";
+import WaveDivider from "@/components/WaveDivider";
 
 const tabs = ["All", "Birthday", "Wedding", "Celebration", "Custom"];
 
@@ -70,12 +71,12 @@ const TprBespoke = () => {
       : allProducts.filter((p) => p.category === active);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen mt-10 bg-white">
       <AnnouncementBar />
       <Navbar />
 
       {/* Hero */}
-      <section className="relative h-80 md:h-96 overflow-hidden">
+      <section className="relative mb-8 h-60 sm:h-80 md:h-96 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=1600&q=85"
           alt="TPR Bespoke"
@@ -85,7 +86,7 @@ const TprBespoke = () => {
           <p className="font-lato text-xs tracking-[0.35em] uppercase text-blush mb-3 animate-fade-in-up">
             Custom Celebration Cakes
           </p>
-          <h1 className="font-playfair text-5xl md:text-6xl text-primary-foreground animate-fade-in-up">
+          <h1 className="font-playfair text-3xl sm:text-5xl md:text-6xl text-primary-foreground animate-fade-in-up">
             TPR Bespoke
           </h1>
           <div className="w-16 h-0.5 bg-blush mt-4 animate-fade-in-up" />
@@ -95,39 +96,48 @@ const TprBespoke = () => {
         </div>
       </section>
 
+      {/* Wave: white → pink */}
+      <WaveDivider height={50} color="#fce4ec" />
+
       {/* Tabs */}
-      <section className="py-12 px-6 max-w-7xl mx-auto">
-        <ScrollReveal>
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActive(tab)}
-                className={`font-lato text-xs tracking-widest uppercase px-6 py-2.5 rounded-full border transition-all duration-300 ${
-                  active === tab
+      <div style={{ background: "#fce4ec" }}>
+        <section className="py-8 sm:py-12 px-4 sm:px-6 max-w-7xl mx-auto">
+          <ScrollReveal>
+            <div className="flex flex-wrap justify-center gap-3 mb-12">
+              {tabs.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActive(tab)}
+                  className={`font-lato text-xs tracking-widest uppercase px-4 sm:px-6 py-2 sm:py-2.5 rounded-full border transition-all duration-300 ${active === tab
                     ? "bg-burgundy text-primary-foreground border-burgundy"
                     : "border-muted text-muted-foreground hover:border-mauve hover:text-mauve"
-                }`}
-              >
-                {tab}
-              </button>
+                    }`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-7">
+            {filtered.map((p, i) => (
+              <ScrollReveal key={p.name} delay={i * 80}>
+                <ProductCard {...p} slug="/customise" category="TPR Bespoke" />
+              </ScrollReveal>
             ))}
           </div>
-        </ScrollReveal>
+        </section>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
-          {filtered.map((p, i) => (
-            <ScrollReveal key={p.name} delay={i * 80}>
-              <ProductCard {...p} slug="/customise" />
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
+      {/* Wave: pink → white */}
+      <div style={{ background: "#fce4ec" }}>
+        <WaveDivider height={50} color="white" />
+      </div>
 
       {/* Bottom CTA */}
-      <section className="bg-burgundy py-16 text-center px-6">
+      <section className="bg-burgundy py-10 mt-10 sm:py-16 text-center px-4 sm:px-6">
         <ScrollReveal>
-          <h3 className="font-playfair text-3xl text-primary-foreground mb-3">
+          <h3 className="font-playfair text-2xl sm:text-3xl text-primary-foreground mb-3">
             Can't find what you're looking for?
           </h3>
           <p className="font-lato text-sm text-primary-foreground/80 mb-6 max-w-md mx-auto">

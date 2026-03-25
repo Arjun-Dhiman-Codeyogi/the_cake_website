@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductCard from "@/components/ProductCard";
 import ScrollReveal from "@/components/ScrollReveal";
+import WaveDivider from "@/components/WaveDivider";
 
 const categories = [
   {
@@ -64,12 +65,12 @@ const products = [
 
 const GourmetCurations = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen mt-10 bg-white">
       <AnnouncementBar />
       <Navbar />
 
       {/* Hero */}
-      <section className="relative h-72 md:h-96 overflow-hidden">
+      <section className="relative h-52 sm:h-72 md:h-96 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1484659619207-9165d119dafe?w=1600&q=85"
           alt="Gourmet Curations"
@@ -79,7 +80,7 @@ const GourmetCurations = () => {
           <p className="font-lato text-xs tracking-[0.35em] uppercase text-blush mb-3 animate-fade-in-up">
             Indulge Your Senses
           </p>
-          <h1 className="font-playfair text-5xl md:text-6xl text-primary-foreground animate-fade-in-up">
+          <h1 className="font-playfair text-3xl sm:text-5xl md:text-6xl text-primary-foreground animate-fade-in-up">
             Gourmet Curations
           </h1>
           <div className="w-16 h-0.5 bg-blush mt-4 animate-fade-in-up" />
@@ -90,22 +91,22 @@ const GourmetCurations = () => {
       </section>
 
       {/* Categories */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <ScrollReveal className="text-center mb-12">
-          <h2 className="font-playfair text-4xl text-foreground">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+        <ScrollReveal className="text-center mb-8 sm:mb-12">
+          <h2 className="font-playfair text-2xl sm:text-4xl text-foreground">
             Browse Categories
           </h2>
           <div className="w-12 h-0.5 bg-mauve mx-auto mt-4" />
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
           {categories.map((cat, i) => (
             <ScrollReveal key={cat.name} delay={i * 100}>
               <div className="group relative overflow-hidden rounded-xl cursor-pointer">
                 <img
                   src={cat.image}
                   alt={cat.name}
-                  className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-32 sm:h-44 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-burgundy/50 group-hover:bg-burgundy/65 transition-colors flex flex-col items-center justify-center text-center p-4">
                   <h3 className="font-playfair text-lg text-primary-foreground">
@@ -119,28 +120,38 @@ const GourmetCurations = () => {
         </div>
       </section>
 
-      {/* Products */}
-      <section className="bg-secondary py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal className="text-center mb-12">
-            <p className="font-lato text-xs tracking-[0.3em] uppercase text-mauve mb-2">
-              Featured Picks
-            </p>
-            <h2 className="font-playfair text-4xl text-foreground">
-              Artisan Selections
-            </h2>
-            <div className="w-12 h-0.5 bg-mauve mx-auto mt-4" />
-          </ScrollReveal>
+      {/* Wave: white → pink */}
+      <WaveDivider height={50} color="#fce4ec" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((p, i) => (
-              <ScrollReveal key={p.name} delay={i * 90}>
-                <ProductCard {...p} />
-              </ScrollReveal>
-            ))}
+      {/* Products */}
+      <div style={{ background: "#fce4ec" }}>
+        <section className="py-10 sm:py-16 px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto">
+            <ScrollReveal className="text-center mb-12">
+              <p className="font-lato text-xs tracking-[0.3em] uppercase text-mauve mb-2">
+                Featured Picks
+              </p>
+              <h2 className="font-playfair text-2xl sm:text-4xl text-foreground">
+                Artisan Selections
+              </h2>
+              <div className="w-12 h-0.5 bg-mauve mx-auto mt-4" />
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+              {products.map((p, i) => (
+                <ScrollReveal key={p.name} delay={i * 90}>
+                  <ProductCard {...p} category="Gourmet" />
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
+      {/* Wave: pink → white */}
+      <div style={{ background: "#fce4ec" }}>
+        <WaveDivider height={50} color="white" />
+      </div>
 
       <Footer />
     </div>

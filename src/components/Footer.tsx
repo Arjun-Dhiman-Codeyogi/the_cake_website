@@ -3,11 +3,11 @@ import { Instagram, Facebook, Heart } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-burgundy text-primary-foreground">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <footer className="bg-burgundy mt-10 text-primary-foreground">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10">
         {/* Brand */}
         <div className="flex flex-col gap-4">
-          <h3 className="font-playfair text-3xl">The Pink Rosette</h3>
+          <h3 className="font-playfair text-2xl sm:text-3xl">The Pink Rosette</h3>
           <p className="font-lato text-xs tracking-[0.2em] uppercase text-primary-foreground/70">
             Est. 2018 · Mumbai
           </p>
@@ -22,7 +22,7 @@ const Footer = () => {
               rel="noreferrer"
               className="hover:text-blush transition-colors"
             >
-              <Instagram className="w-5 h-5" />
+              <Instagram className="w-6 h-6 sm:w-5 sm:h-5" />
             </a>
             <a
               href="https://www.facebook.com/thepinkrosette"
@@ -30,7 +30,7 @@ const Footer = () => {
               rel="noreferrer"
               className="hover:text-blush transition-colors"
             >
-              <Facebook className="w-5 h-5" />
+              <Facebook className="w-6 h-6 sm:w-5 sm:h-5" />
             </a>
           </div>
         </div>
@@ -65,10 +65,10 @@ const Footer = () => {
           <ul className="flex flex-col gap-3 font-lato text-sm text-primary-foreground/75">
             <li>
               <p className="text-primary-foreground/90 font-medium mb-1">
-                Fort, Mumbai
+                Mumbai
               </p>
               <p className="leading-relaxed">
-                Our flagship Patisserie & Café nestled in the heart of Fort,
+                Our flagship Patisserie & Café nestled in the heart of
                 Mumbai
               </p>
             </li>
@@ -84,17 +84,17 @@ const Footer = () => {
                 href="mailto:hello@thepinkrosette.com"
                 className="hover:text-primary-foreground transition-colors"
               >
-                hello@thepinkrosette.com
+                thepinkrosette@gmail.com
               </a>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="border-t border-primary-foreground/20 py-5 text-center">
+      <div className="border-t border-primary-foreground/20 py-4 sm:py-5 text-center">
         <p className="font-lato text-xs text-primary-foreground/50 tracking-widest flex items-center justify-center gap-2">
-          © {new Date().getFullYear()} The Pink Rosette. Made with{" "}
-          <Heart className="w-3 h-3 fill-current text-blush" /> in Mumbai.
+          © {new Date().getFullYear()} The Pink Rosette. Made by
+          Arjun Dhiman.
         </p>
       </div>
     </footer>
