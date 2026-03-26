@@ -36,28 +36,28 @@ const relatedProducts = [
   {
     name: "Rose Macarons (Box of 6)",
     price: "\u20B9750",
-    image: "/images/photo-1558326567-98ae2405596b.jpg",
+    image: "/images/photo-1558326567-98ae2405596b.webp",
     badge: "Bestseller",
     category: "Gourmet",
   },
   {
     name: "Classic Chocolate Truffle",
     price: "\u20B91,800",
-    image: "/images/photo-1578985545062-69928b1d9587.jpg",
+    image: "/images/photo-1578985545062-69928b1d9587.webp",
     badge: "Bestseller",
     category: "Signature Cakes",
   },
   {
     name: "Blueberry Cheesecake",
     price: "\u20B91,400",
-    image: "/images/photo-1533134242443-d4fd215305ad.jpg",
+    image: "/images/photo-1533134242443-d4fd215305ad.webp",
     badge: "Signature",
     category: "Tarts & Cheesecakes",
   },
   {
     name: "Caramel Luxe",
     price: "\u20B92,200",
-    image: "/images/photo-1481391319762-47dff72954d9.jpg",
+    image: "/images/photo-1481391319762-47dff72954d9.webp",
     badge: "New",
     category: "Fleur Delice",
   },
@@ -67,7 +67,7 @@ const ProductDetail = () => {
   const [params] = useSearchParams();
   const name = params.get("name") || "Enchanted Garden";
   const price = params.get("price") || "\u20B96,000";
-  const image = params.get("image") || "/images/photo-1486427944299-d1955d23e34d.jpg";
+  const image = params.get("image") || "/images/photo-1486427944299-d1955d23e34d.webp";
   const badge = params.get("badge") || "";
   const category = params.get("category") || "";
 

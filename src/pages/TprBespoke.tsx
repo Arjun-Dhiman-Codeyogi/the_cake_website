@@ -5,6 +5,7 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductCard from "@/components/ProductCard";
 import ScrollReveal from "@/components/ScrollReveal";
 import WaveDivider from "@/components/WaveDivider";
+import usePreloadImages from "@/hooks/usePreloadImages";
 
 const tabs = ["All", "Birthday", "Wedding", "Celebration", "Custom"];
 
@@ -12,57 +13,58 @@ const allProducts = [
   {
     name: "Signature Chocolate Cake",
     price: "From ₹1,500",
-    image: "/images/photo-1606890737304-57a1ca8a5b62.jpg",
+    image: "/images/photo-1606890737304-57a1ca8a5b62.webp",
     badge: "Bestseller",
     category: "Birthday",
   },
   {
     name: "Victorian Vanilla",
     price: "From ₹1,800",
-    image: "/images/photo-1535141192574-5d4897c12636.jpg",
+    image: "/images/photo-1535141192574-5d4897c12636.webp",
     category: "Wedding",
   },
   {
     name: "Caramel Luxe",
     price: "From ₹2,200",
-    image: "/images/photo-1481391319762-47dff72954d9.jpg",
+    image: "/images/photo-1481391319762-47dff72954d9.webp",
     badge: "New",
     category: "Celebration",
   },
   {
     name: "Chocolate Hazelnut",
     price: "From ₹1,900",
-    image: "/images/photo-1578985545062-69928b1d9587.jpg",
+    image: "/images/photo-1578985545062-69928b1d9587.webp",
     category: "Birthday",
   },
   {
     name: "Fondant Fantasy",
     price: "From ₹3,500",
-    image: "/images/photo-1551024601-bec78aea704b.jpg",
+    image: "/images/photo-1551024601-bec78aea704b.webp",
     badge: "Custom",
     category: "Custom",
   },
   {
     name: "Tiered Elegance",
     price: "From ₹8,000",
-    image: "/images/photo-1464349095431-e9a21285b5f3.jpg",
+    image: "/images/photo-1464349095431-e9a21285b5f3.webp",
     category: "Wedding",
   },
   {
     name: "Birthday Bonanza",
     price: "From ₹1,600",
-    image: "/images/photo-1562440499-64c9a111f713.jpg",
+    image: "/images/photo-1562440499-64c9a111f713.webp",
     category: "Birthday",
   },
   {
     name: "Anniversary Delight",
     price: "From ₹2,500",
-    image: "/images/photo-1588195538326-c5b1e9f80a1b.jpg",
+    image: "/images/photo-1588195538326-c5b1e9f80a1b.webp",
     category: "Celebration",
   },
 ];
 
 const TprBespoke = () => {
+  usePreloadImages(allProducts.map((p) => p.image));
   const [active, setActive] = useState("All");
 
   const filtered =
@@ -78,9 +80,9 @@ const TprBespoke = () => {
       {/* Hero */}
       <section className="relative mb-8 h-60 sm:h-80 md:h-96 overflow-hidden">
         <img
-          src="/images/photo-1558636508-e0db3814bd1d.jpg"
+          src="/images/photo-1558636508-e0db3814bd1d.webp"
           alt="TPR Bespoke"
-          loading="lazy"
+          loading="eager"
           decoding="async"
           className="w-full h-full object-cover ken-burns"
         />

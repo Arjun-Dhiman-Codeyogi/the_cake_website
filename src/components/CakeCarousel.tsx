@@ -35,7 +35,7 @@ const frameIndices = Array.from({ length: FRAMES_TO_USE }, (_, i) => i * FRAME_S
 
 const pad = (n: number) => String(n).padStart(3, "0");
 const framePath = (folder: string, i: number) =>
-  `${folder}/ezgif-frame-${pad(i)}.jpg`;
+  `${folder}/ezgif-frame-${pad(i)}.webp`;
 
 const CakeCarousel = () => {
   const [active, setActive] = useState(0);

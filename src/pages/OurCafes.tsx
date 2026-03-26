@@ -4,15 +4,16 @@ import Footer from "@/components/Footer";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ScrollReveal from "@/components/ScrollReveal";
 import WaveDivider from "@/components/WaveDivider";
+import usePreloadImages from "@/hooks/usePreloadImages";
 import { MapPin, Clock, ExternalLink } from "lucide-react";
 
 const gallery = [
-  "/images/photo-1554118811-1e0d58224f24.jpg",
-  "/images/photo-1445116572660-236099ec97a0.jpg",
-  "/images/photo-1521017432531-fbd92d768814.jpg",
-  "/images/photo-1501339847302-ac426a4a7cbb.jpg",
-  "/images/photo-1517248135467-4c7edcad34c4.jpg",
-  "/images/photo-1568901346375-23c9450c58cd.jpg",
+  "/images/photo-1554118811-1e0d58224f24.webp",
+  "/images/photo-1445116572660-236099ec97a0.webp",
+  "/images/photo-1521017432531-fbd92d768814.webp",
+  "/images/photo-1501339847302-ac426a4a7cbb.webp",
+  "/images/photo-1517248135467-4c7edcad34c4.webp",
+  "/images/photo-1568901346375-23c9450c58cd.webp",
 ];
 
 /* ── 3D Carousel Gallery (like CakeCarousel) ── */
@@ -81,7 +82,7 @@ const GallerySlider = ({ images }: { images: string[] }) => {
                   <img
                     src={images[idx]}
                     alt={`Café ambiance ${idx + 1}`}
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                     className="w-full h-full object-cover"
                   />
@@ -119,6 +120,7 @@ const GallerySlider = ({ images }: { images: string[] }) => {
 };
 
 const OurCafes = () => {
+  usePreloadImages(gallery);
   return (
     <div className="min-h-screen bg-white">
       <AnnouncementBar />
@@ -127,7 +129,7 @@ const OurCafes = () => {
       {/* Hero */}
       <section className="relative h-60 sm:h-80 md:h-[500px] overflow-hidden">
         <img
-          src="/images/photo-1554118811-1e0d58224f24.jpg"
+          src="/images/photo-1554118811-1e0d58224f24.webp"
           alt="The Pink Rosette Café"
           loading="lazy"
           decoding="async"

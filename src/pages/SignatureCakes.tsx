@@ -4,60 +4,62 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductCard from "@/components/ProductCard";
 import ScrollReveal from "@/components/ScrollReveal";
 import WaveDivider from "@/components/WaveDivider";
+import usePreloadImages from "@/hooks/usePreloadImages";
 
 const cakes = [
   {
     name: "Classic Chocolate Truffle",
     price: "₹1,800",
-    image: "/images/photo-1578985545062-69928b1d9587.jpg",
+    image: "/images/photo-1578985545062-69928b1d9587.webp",
     badge: "Bestseller",
   },
   {
     name: "Red Velvet Royale",
     price: "₹2,200",
-    image: "/images/photo-1606890737304-57a1ca8a5b62.jpg",
+    image: "/images/photo-1606890737304-57a1ca8a5b62.webp",
     badge: "Signature",
   },
   {
     name: "Vanilla Bean Dream",
     price: "₹1,600",
-    image: "/images/photo-1535141192574-5d4897c12636.jpg",
+    image: "/images/photo-1535141192574-5d4897c12636.webp",
   },
   {
     name: "Hazelnut Praline",
     price: "₹2,500",
-    image: "/images/photo-1481391319762-47dff72954d9.jpg",
+    image: "/images/photo-1481391319762-47dff72954d9.webp",
     badge: "New",
   },
   {
     name: "Tiramisu Tower",
     price: "₹2,800",
-    image: "/images/photo-1551024601-bec78aea704b.jpg",
+    image: "/images/photo-1551024601-bec78aea704b.webp",
   },
   {
     name: "Caramel Drizzle",
     price: "₹2,000",
-    image: "/images/photo-1464349095431-e9a21285b5f3.jpg",
+    image: "/images/photo-1464349095431-e9a21285b5f3.webp",
   },
   {
     name: "Pistachio Bliss",
     price: "₹2,400",
-    image: "/images/photo-1563729784474-d77dbb933a9e.jpg",
+    image: "/images/photo-1563729784474-d77dbb933a9e.webp",
     badge: "Popular",
   },
   {
     name: "Mango Passion",
     price: "₹1,900",
-    image: "/images/photo-1565958011703-44f9829ba187.jpg",
+    image: "/images/photo-1565958011703-44f9829ba187.webp",
   },
   {
     name: "Dark Forest Gateau",
     price: "₹2,100",
-    image: "/images/photo-1588195538326-c5b1e9f80a1b.jpg",
+    image: "/images/photo-1588195538326-c5b1e9f80a1b.webp",
   },
 ];
 
 const SignatureCakes = () => {
+  usePreloadImages(cakes.map((p) => p.image));
   return (
     <div className="min-h-screen bg-white">
       <AnnouncementBar />
@@ -66,9 +68,9 @@ const SignatureCakes = () => {
       {/* Hero */}
       <section className="relative h-52 mb-6 sm:h-80 md:h-[420px] overflow-hidden">
         <img
-          src="/images/photo-1578985545062-69928b1d9587.jpg"
+          src="/images/photo-1578985545062-69928b1d9587.webp"
           alt="Signature Cakes"
-          loading="lazy"
+          loading="eager"
           decoding="async"
           className="w-full h-full object-cover ken-burns"
         />

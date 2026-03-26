@@ -4,59 +4,61 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductCard from "@/components/ProductCard";
 import ScrollReveal from "@/components/ScrollReveal";
 import WaveDivider from "@/components/WaveDivider";
+import usePreloadImages from "@/hooks/usePreloadImages";
 
 const products = [
   {
     name: "Flowers in Bloom",
     price: "₹6,500",
-    image: "/images/photo-1618160702438-9b02ab6515c9.jpg",
+    image: "/images/photo-1618160702438-9b02ab6515c9.webp",
     badge: "Signature",
   },
   {
     name: "Enchanted Garden",
     price: "₹6,000",
-    image: "/images/photo-1486427944299-d1955d23e34d.jpg",
+    image: "/images/photo-1486427944299-d1955d23e34d.webp",
     badge: "New",
   },
   {
     name: "Blush Cascade",
     price: "₹5,800",
-    image: "/images/photo-1571115177098-24ec42ed204d.jpg",
+    image: "/images/photo-1571115177098-24ec42ed204d.webp",
   },
   {
     name: "Rosette Dream",
     price: "₹5,500",
-    image: "/images/photo-1565958011703-44f9829ba187.jpg",
+    image: "/images/photo-1565958011703-44f9829ba187.webp",
     badge: "Bestseller",
   },
   {
     name: "Petal Whisper",
     price: "₹5,200",
-    image: "/images/photo-1488477181946-6428a0291777.jpg",
+    image: "/images/photo-1488477181946-6428a0291777.webp",
   },
   {
     name: "Garden Soirée",
     price: "₹6,200",
-    image: "/images/photo-1563729784474-d77dbb933a9e.jpg",
+    image: "/images/photo-1563729784474-d77dbb933a9e.webp",
   },
   {
     name: "Cherry Blossom",
     price: "₹4,800",
-    image: "/images/photo-1551024601-bec78aea704b.jpg",
+    image: "/images/photo-1551024601-bec78aea704b.webp",
   },
   {
     name: "Lavender Haze",
     price: "₹5,000",
-    image: "/images/photo-1464349095431-e9a21285b5f3.jpg",
+    image: "/images/photo-1464349095431-e9a21285b5f3.webp",
   },
   {
     name: "Florentine Delight",
     price: "₹5,600",
-    image: "/images/photo-1558636508-e0db3814bd1d.jpg",
+    image: "/images/photo-1558636508-e0db3814bd1d.webp",
   },
 ];
 
 const FleurDelice = () => {
+  usePreloadImages(products.map((p) => p.image));
   return (
     <div className="min-h-screen bg-white">
       <AnnouncementBar />
@@ -65,9 +67,9 @@ const FleurDelice = () => {
       {/* Hero Banner */}
       <section className="relative mt-8 mb-5 h-60 sm:h-80 md:h-96 overflow-hidden">
         <img
-          src="/images/photo-1563729784474-d77dbb933a9e.jpg"
+          src="/images/photo-1563729784474-d77dbb933a9e.webp"
           alt="Fleur Delice Collection"
-          loading="lazy"
+          loading="eager"
           decoding="async"
           className="w-full h-full object-cover ken-burns"
         />

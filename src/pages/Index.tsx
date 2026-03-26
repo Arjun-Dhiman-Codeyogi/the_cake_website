@@ -8,25 +8,26 @@ import ProductCard from "@/components/ProductCard";
 import ScrollReveal from "@/components/ScrollReveal";
 import WaveDivider from "@/components/WaveDivider";
 import CakeCarousel from "@/components/CakeCarousel";
+import usePreloadImages from "@/hooks/usePreloadImages";
 
 const heroSlides = [
   {
-    image: "/images/photo-1578985545062-69928b1d9587.jpg",
+    image: "/images/photo-1578985545062-69928b1d9587.webp",
     headline: "Crafted with Love.",
     sub: "Since 2018.",
   },
   {
-    image: "/images/photo-1488477181946-6428a0291777.jpg",
+    image: "/images/photo-1488477181946-6428a0291777.webp",
     headline: "Artisan Patisserie.",
     sub: "Mumbai's Finest.",
   },
   {
-    image: "/images/photo-1464349095431-e9a21285b5f3.jpg",
+    image: "/images/photo-1464349095431-e9a21285b5f3.webp",
     headline: "Fleur Delice.",
     sub: "Flowers in Every Bite.",
   },
   {
-    image: "/images/photo-1535141192574-5d4897c12636.jpg",
+    image: "/images/photo-1535141192574-5d4897c12636.webp",
     headline: "Bespoke Creations.",
     sub: "Made Just for You.",
   },
@@ -36,48 +37,54 @@ const signatures = [
   {
     name: "Flowers in Bloom",
     price: "₹6,500",
-    image: "/images/photo-1618160702438-9b02ab6515c9.jpg",
+    image: "/images/photo-1618160702438-9b02ab6515c9.webp",
     badge: "Signature",
   },
   {
     name: "Enchanted Garden",
     price: "₹6,000",
-    image: "/images/photo-1486427944299-d1955d23e34d.jpg",
+    image: "/images/photo-1486427944299-d1955d23e34d.webp",
   },
   {
     name: "Rosette Dream",
     price: "₹5,500",
-    image: "/images/photo-1565958011703-44f9829ba187.jpg",
+    image: "/images/photo-1565958011703-44f9829ba187.webp",
     badge: "Bestseller",
   },
   {
     name: "Blush Cascade",
     price: "₹5,800",
-    image: "/images/photo-1571115177098-24ec42ed204d.jpg",
+    image: "/images/photo-1571115177098-24ec42ed204d.webp",
   },
   {
     name: "Caramel Luxe",
     price: "₹4,200",
-    image: "/images/photo-1481391319762-47dff72954d9.jpg",
+    image: "/images/photo-1481391319762-47dff72954d9.webp",
   },
   {
     name: "Choco Velvet",
     price: "₹3,800",
-    image: "/images/photo-1606890737304-57a1ca8a5b62.jpg",
+    image: "/images/photo-1606890737304-57a1ca8a5b62.webp",
   },
 ];
 
 const instaImages = [
-  "/images/photo-1530610476181-d83430b64dcd.jpg",
-  "/images/photo-1495147466023-ac5c588e2e94.jpg",
-  "/images/photo-1470124182917-cc6e71b22ecc.jpg",
-  "/images/photo-1562440499-64c9a111f713.jpg",
+  "/images/photo-1530610476181-d83430b64dcd.webp",
+  "/images/photo-1495147466023-ac5c588e2e94.webp",
+  "/images/photo-1470124182917-cc6e71b22ecc.webp",
+  "/images/photo-1562440499-64c9a111f713.webp",
   "/5.webp",
-  "/images/photo-1587668178277-295251f900ce.jpg",
+  "/images/photo-1587668178277-295251f900ce.webp",
 ];
 
 const Index = () => {
   const [current, setCurrent] = useState(0);
+
+  // Preload all hero + signature images immediately
+  usePreloadImages([
+    ...heroSlides.map((s) => s.image),
+    ...signatures.map((s) => s.image),
+  ]);
 
   useEffect(() => {
     const t = setInterval(() => setCurrent((p) => (p + 1) % heroSlides.length), 5500);
@@ -101,8 +108,9 @@ const Index = () => {
               src={slide.image}
               alt={slide.headline}
               className="w-full h-full object-cover ken-burns"
-              loading={i === 0 ? "eager" : "lazy"}
+              loading="eager"
               decoding="async"
+              fetchPriority={i === 0 ? "high" : "auto"}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-burgundy/50 via-burgundy/30 to-burgundy/60" />
           </div>
@@ -201,7 +209,7 @@ const Index = () => {
         <ScrollReveal className="relative overflow-hidden group cursor-pointer">
           <Link to="/fleur-delice" className="block h-full">
             <img
-              src="/images/photo-1563729784474-d77dbb933a9e.jpg"
+              src="/images/photo-1563729784474-d77dbb933a9e.webp"
               alt="Fleur Delice"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
@@ -224,7 +232,7 @@ const Index = () => {
         <ScrollReveal className="relative overflow-hidden group cursor-pointer" delay={150}>
           <Link to="/tpr-bespoke" className="block h-full">
             <img
-              src="/images/photo-1558636508-e0db3814bd1d.jpg"
+              src="/images/photo-1558636508-e0db3814bd1d.webp"
               alt="TPR Bespoke"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"

@@ -32,9 +32,9 @@ const GetInTouch = () => {
       {/* Page Hero */}
       <section className="relative mt-10 h-40 sm:h-52 md:h-72 overflow-hidden">
         <img
-          src="/images/photo-1486427944299-d1955d23e34d.jpg"
+          src="/images/photo-1486427944299-d1955d23e34d.webp"
           alt="Get In Touch"
-          loading="lazy"
+          loading="eager"
           decoding="async"
           className="w-full h-full object-cover ken-burns"
         />

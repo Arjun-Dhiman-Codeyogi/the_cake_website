@@ -4,26 +4,27 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductCard from "@/components/ProductCard";
 import ScrollReveal from "@/components/ScrollReveal";
 import WaveDivider from "@/components/WaveDivider";
+import usePreloadImages from "@/hooks/usePreloadImages";
 
 const categories = [
   {
     name: "Artisan Chocolates",
-    image: "/images/photo-1548907040-4baa42d10919.jpg",
+    image: "/images/photo-1548907040-4baa42d10919.webp",
     count: "12 Products",
   },
   {
     name: "Macarons",
-    image: "/images/photo-1558326567-98ae2405596b.jpg",
+    image: "/images/photo-1558326567-98ae2405596b.webp",
     count: "8 Products",
   },
   {
     name: "Gift Hampers",
-    image: "/images/photo-1549465220-1a8b9238cd48.jpg",
+    image: "/images/photo-1549465220-1a8b9238cd48.webp",
     count: "6 Products",
   },
   {
     name: "Tarts & Mignardises",
-    image: "/images/photo-1509440159596-0249088772ff.jpg",
+    image: "/images/photo-1509440159596-0249088772ff.webp",
     count: "10 Products",
   },
 ];
@@ -32,38 +33,39 @@ const products = [
   {
     name: "Dark Chocolate Truffles",
     price: "₹850",
-    image: "/images/photo-1548907040-4baa42d10919.jpg",
+    image: "/images/photo-1548907040-4baa42d10919.webp",
     badge: "New",
   },
   {
     name: "Rose Macarons (Box of 6)",
     price: "₹750",
-    image: "/images/photo-1558326567-98ae2405596b.jpg",
+    image: "/images/photo-1558326567-98ae2405596b.webp",
     badge: "Bestseller",
   },
   {
     name: "Luxury Gift Hamper",
     price: "₹2,500",
-    image: "/images/photo-1549465220-1a8b9238cd48.jpg",
+    image: "/images/photo-1549465220-1a8b9238cd48.webp",
   },
   {
     name: "Strawberry Tart",
     price: "₹450",
-    image: "/images/photo-1495147466023-ac5c588e2e94.jpg",
+    image: "/images/photo-1495147466023-ac5c588e2e94.webp",
   },
   {
     name: "Salted Caramel Bonbons",
     price: "₹650",
-    image: "/images/photo-1470124182917-cc6e71b22ecc.jpg",
+    image: "/images/photo-1470124182917-cc6e71b22ecc.webp",
   },
   {
     name: "Pistachio Éclair",
     price: "₹380",
-    image: "/images/photo-1530610476181-d83430b64dcd.jpg",
+    image: "/images/photo-1530610476181-d83430b64dcd.webp",
   },
 ];
 
 const GourmetCurations = () => {
+  usePreloadImages([...categories.map((c) => c.image), ...products.map((p) => p.image)]);
   return (
     <div className="min-h-screen mt-10 bg-white">
       <AnnouncementBar />
@@ -72,9 +74,9 @@ const GourmetCurations = () => {
       {/* Hero */}
       <section className="relative h-52 sm:h-72 md:h-96 overflow-hidden">
         <img
-          src="/images/photo-1484659619207-9165d119dafe.jpg"
+          src="/images/photo-1484659619207-9165d119dafe.webp"
           alt="Gourmet Curations"
-          loading="lazy"
+          loading="eager"
           decoding="async"
           className="w-full h-full object-cover ken-burns"
         />

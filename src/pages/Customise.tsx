@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ScrollReveal from "@/components/ScrollReveal";
 import WaveDivider from "@/components/WaveDivider";
+import usePreloadImages from "@/hooks/usePreloadImages";
 import { MessageCircle, Cake, Heart, Baby, Palette } from "lucide-react";
 
 const steps = [
@@ -28,29 +29,30 @@ const occasions = [
     icon: Cake,
     title: "Birthdays",
     desc: "Our team is here to help you personalise your birthday cake from start to finish, including selecting flavours and creating a one-of-a-kind design!",
-    image: "/images/photo-1558636508-e0db3814bd1d.jpg",
+    image: "/images/photo-1558636508-e0db3814bd1d.webp",
   },
   {
     icon: Heart,
     title: "Weddings & Anniversaries",
     desc: "A cake serves as the focal point for your celebrations. Allow us to assist in customising something that meets your criteria & makes your special occasion even more sweet!",
-    image: "/images/photo-1535254973040-607b474cb50d.jpg",
+    image: "/images/photo-1535254973040-607b474cb50d.webp",
   },
   {
     icon: Baby,
     title: "Baby Shower / Announcements",
     desc: "Personal occasions like a baby announcement require more attention to detail and we're here for you! Our baby shower cakes offer limitless opportunities for customisations, be it names, dates or special messages!",
-    image: "/images/photo-1623428187969-5da2dcea5ebf.jpg",
+    image: "/images/photo-1623428187969-5da2dcea5ebf.webp",
   },
   {
     icon: Palette,
     title: "Themed Cakes",
     desc: "Experience the magic of themed cakes that turn your sweet dreams into edible works of art. Each cake is carefully crafted with attention to every detail, bringing your unique vision to life!",
-    image: "/images/photo-1621303837174-89787a7d4729.jpg",
+    image: "/images/photo-1621303837174-89787a7d4729.webp",
   },
 ];
 
 const Customise = () => {
+  usePreloadImages(occasions.map((o) => o.image));
   return (
     <div className="min-h-screen bg-white">
       <AnnouncementBar />
@@ -60,9 +62,9 @@ const Customise = () => {
       <section className="grid md:grid-cols-2 min-h-0 md:min-h-[70vh]">
         <div className="relative overflow-hidden h-48 sm:h-72 md:h-[100vh]">
           <img
-            src="/images/photo-1563729784474-d77dbb933a9e.jpg"
+            src="/images/photo-1563729784474-d77dbb933a9e.webp"
             alt="Bespoke Cake"
-            loading="lazy"
+            loading="eager"
             decoding="async"
             className="w-full h-full object-cover ken-burns"
           />
