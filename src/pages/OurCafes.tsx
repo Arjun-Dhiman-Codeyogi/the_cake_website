@@ -7,12 +7,12 @@ import WaveDivider from "@/components/WaveDivider";
 import { MapPin, Clock, ExternalLink } from "lucide-react";
 
 const gallery = [
-  "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=70",
-  "https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=70",
-  "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&q=70",
-  "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=70",
-  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=70",
-  "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=70",
+  "/images/photo-1554118811-1e0d58224f24.jpg",
+  "/images/photo-1445116572660-236099ec97a0.jpg",
+  "/images/photo-1521017432531-fbd92d768814.jpg",
+  "/images/photo-1501339847302-ac426a4a7cbb.jpg",
+  "/images/photo-1517248135467-4c7edcad34c4.jpg",
+  "/images/photo-1568901346375-23c9450c58cd.jpg",
 ];
 
 /* ── 3D Carousel Gallery (like CakeCarousel) ── */
@@ -127,7 +127,7 @@ const OurCafes = () => {
       {/* Hero */}
       <section className="relative h-60 sm:h-80 md:h-[500px] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=70"
+          src="/images/photo-1554118811-1e0d58224f24.jpg"
           alt="The Pink Rosette Café"
           loading="lazy"
           decoding="async"
@@ -153,7 +153,7 @@ const OurCafes = () => {
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center bg-card rounded-2xl overflow-hidden shadow-lg">
             <div className="relative overflow-hidden h-80 md:h-full">
               <img
-                src="public/cafe.webp"
+                src="/cafe.webp"
                 alt="Fort Café Interior"
                 loading="lazy"
                 decoding="async"

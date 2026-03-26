@@ -93,10 +93,10 @@ const MiniCalendar = ({ selected, onSelect }: { selected: Date | null; onSelect:
 
 /* ─── Suggested products ─── */
 const suggestions = [
-  { name: "Rose Macarons (Box of 6)", price: "\u20B9750", image: "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=400&q=80", badge: "Bestseller", category: "Gourmet" },
-  { name: "Classic Chocolate Truffle", price: "\u20B91,800", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80", badge: "Bestseller", category: "Signature Cakes" },
-  { name: "Blueberry Cheesecake", price: "\u20B91,400", image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400&q=80", badge: "Signature", category: "Tarts & Cheesecakes" },
-  { name: "Red Velvet Royale", price: "\u20B92,200", image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&q=80", badge: "Signature", category: "Signature Cakes" },
+  { name: "Rose Macarons (Box of 6)", price: "\u20B9750", image: "/images/photo-1558326567-98ae2405596b.jpg", badge: "Bestseller", category: "Gourmet" },
+  { name: "Classic Chocolate Truffle", price: "\u20B91,800", image: "/images/photo-1578985545062-69928b1d9587.jpg", badge: "Bestseller", category: "Signature Cakes" },
+  { name: "Blueberry Cheesecake", price: "\u20B91,400", image: "/images/photo-1533134242443-d4fd215305ad.jpg", badge: "Signature", category: "Tarts & Cheesecakes" },
+  { name: "Red Velvet Royale", price: "\u20B92,200", image: "/images/photo-1606890737304-57a1ca8a5b62.jpg", badge: "Signature", category: "Signature Cakes" },
 ];
 
 const navLinks = [

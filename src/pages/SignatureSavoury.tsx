@@ -22,7 +22,7 @@ const products: Product[] = [
     name: "Margherita Pizza",
     price: "\u20B9450",
     priceNum: 450,
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=70",
+    image: "/images/photo-1574071318508-1cdbab80d002.jpg",
     badge: "Bestseller",
     tag: "Pizza",
     inStock: true,
@@ -31,7 +31,7 @@ const products: Product[] = [
     name: "Farm Fresh Veggie Pizza",
     price: "\u20B9550",
     priceNum: 550,
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=70",
+    image: "/images/photo-1565299624946-b28f40a0ae38.jpg",
     badge: "Popular",
     tag: "Pizza",
     inStock: true,
@@ -40,7 +40,7 @@ const products: Product[] = [
     name: "Paneer Tikka Pizza",
     price: "\u20B9620",
     priceNum: 620,
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=70",
+    image: "/images/photo-1513104890138-7c749659a591.jpg",
     badge: "New",
     tag: "Pizza",
     inStock: false,
@@ -49,7 +49,7 @@ const products: Product[] = [
     name: "Classic Veg Burger",
     price: "\u20B9350",
     priceNum: 350,
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=70",
+    image: "/images/photo-1568901346375-23c9450c58cd.jpg",
     badge: "Bestseller",
     tag: "Burger",
     inStock: true,
@@ -58,7 +58,7 @@ const products: Product[] = [
     name: "Spicy Paneer Burger",
     price: "\u20B9420",
     priceNum: 420,
-    image: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=70",
+    image: "/images/photo-1550547660-d9450f859349.jpg",
     tag: "Burger",
     inStock: true,
   },
@@ -118,7 +118,7 @@ const SignatureSavoury = () => {
       {/* Hero */}
       <section className="relative h-52 sm:h-80 md:h-[420px] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=70"
+          src="/images/photo-1574071318508-1cdbab80d002.jpg"
           alt="Pizzas & Burgers"
           loading="lazy"
           decoding="async"

@@ -36,28 +36,28 @@ const relatedProducts = [
   {
     name: "Rose Macarons (Box of 6)",
     price: "\u20B9750",
-    image: "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=600&q=70",
+    image: "/images/photo-1558326567-98ae2405596b.jpg",
     badge: "Bestseller",
     category: "Gourmet",
   },
   {
     name: "Classic Chocolate Truffle",
     price: "\u20B91,800",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=70",
+    image: "/images/photo-1578985545062-69928b1d9587.jpg",
     badge: "Bestseller",
     category: "Signature Cakes",
   },
   {
     name: "Blueberry Cheesecake",
     price: "\u20B91,400",
-    image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&q=70",
+    image: "/images/photo-1533134242443-d4fd215305ad.jpg",
     badge: "Signature",
     category: "Tarts & Cheesecakes",
   },
   {
     name: "Caramel Luxe",
     price: "\u20B92,200",
-    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=600&q=70",
+    image: "/images/photo-1481391319762-47dff72954d9.jpg",
     badge: "New",
     category: "Fleur Delice",
   },
@@ -67,7 +67,7 @@ const ProductDetail = () => {
   const [params] = useSearchParams();
   const name = params.get("name") || "Enchanted Garden";
   const price = params.get("price") || "\u20B96,000";
-  const image = params.get("image") || "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=70";
+  const image = params.get("image") || "/images/photo-1486427944299-d1955d23e34d.jpg";
   const badge = params.get("badge") || "";
   const category = params.get("category") || "";
 
@@ -395,7 +395,7 @@ const ProductDetail = () => {
             <div className="w-10 h-0.5 bg-mauve mx-auto mt-3" />
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {relatedProducts.map((p, i) => (
               <ScrollReveal key={p.name} delay={i * 80}>
                 <ProductCard {...p} />

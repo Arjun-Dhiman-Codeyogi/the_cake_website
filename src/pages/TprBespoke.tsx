@@ -12,52 +12,52 @@ const allProducts = [
   {
     name: "Signature Chocolate Cake",
     price: "From ₹1,500",
-    image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=600&q=70",
+    image: "/images/photo-1606890737304-57a1ca8a5b62.jpg",
     badge: "Bestseller",
     category: "Birthday",
   },
   {
     name: "Victorian Vanilla",
     price: "From ₹1,800",
-    image: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=600&q=70",
+    image: "/images/photo-1535141192574-5d4897c12636.jpg",
     category: "Wedding",
   },
   {
     name: "Caramel Luxe",
     price: "From ₹2,200",
-    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=600&q=70",
+    image: "/images/photo-1481391319762-47dff72954d9.jpg",
     badge: "New",
     category: "Celebration",
   },
   {
     name: "Chocolate Hazelnut",
     price: "From ₹1,900",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=70",
+    image: "/images/photo-1578985545062-69928b1d9587.jpg",
     category: "Birthday",
   },
   {
     name: "Fondant Fantasy",
     price: "From ₹3,500",
-    image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=70",
+    image: "/images/photo-1551024601-bec78aea704b.jpg",
     badge: "Custom",
     category: "Custom",
   },
   {
     name: "Tiered Elegance",
     price: "From ₹8,000",
-    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=70",
+    image: "/images/photo-1464349095431-e9a21285b5f3.jpg",
     category: "Wedding",
   },
   {
     name: "Birthday Bonanza",
     price: "From ₹1,600",
-    image: "https://images.unsplash.com/photo-1562440499-64c9a111f713?w=600&q=70",
+    image: "/images/photo-1562440499-64c9a111f713.jpg",
     category: "Birthday",
   },
   {
     name: "Anniversary Delight",
     price: "From ₹2,500",
-    image: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=600&q=70",
+    image: "/images/photo-1588195538326-c5b1e9f80a1b.jpg",
     category: "Celebration",
   },
 ];
@@ -78,7 +78,7 @@ const TprBespoke = () => {
       {/* Hero */}
       <section className="relative mb-8 h-60 sm:h-80 md:h-96 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=800&q=70"
+          src="/images/photo-1558636508-e0db3814bd1d.jpg"
           alt="TPR Bespoke"
           loading="lazy"
           decoding="async"

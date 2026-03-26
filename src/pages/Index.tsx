@@ -11,22 +11,22 @@ import CakeCarousel from "@/components/CakeCarousel";
 
 const heroSlides = [
   {
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=70",
+    image: "/images/photo-1578985545062-69928b1d9587.jpg",
     headline: "Crafted with Love.",
     sub: "Since 2018.",
   },
   {
-    image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=70",
+    image: "/images/photo-1488477181946-6428a0291777.jpg",
     headline: "Artisan Patisserie.",
     sub: "Mumbai's Finest.",
   },
   {
-    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=70",
+    image: "/images/photo-1464349095431-e9a21285b5f3.jpg",
     headline: "Fleur Delice.",
     sub: "Flowers in Every Bite.",
   },
   {
-    image: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=800&q=70",
+    image: "/images/photo-1535141192574-5d4897c12636.jpg",
     headline: "Bespoke Creations.",
     sub: "Made Just for You.",
   },
@@ -36,44 +36,44 @@ const signatures = [
   {
     name: "Flowers in Bloom",
     price: "₹6,500",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&q=70",
+    image: "/images/photo-1618160702438-9b02ab6515c9.jpg",
     badge: "Signature",
   },
   {
     name: "Enchanted Garden",
     price: "₹6,000",
-    image: "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=400&q=70",
+    image: "/images/photo-1486427944299-d1955d23e34d.jpg",
   },
   {
     name: "Rosette Dream",
     price: "₹5,500",
-    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=70",
+    image: "/images/photo-1565958011703-44f9829ba187.jpg",
     badge: "Bestseller",
   },
   {
     name: "Blush Cascade",
     price: "₹5,800",
-    image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=400&q=70",
+    image: "/images/photo-1571115177098-24ec42ed204d.jpg",
   },
   {
     name: "Caramel Luxe",
     price: "₹4,200",
-    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&q=70",
+    image: "/images/photo-1481391319762-47dff72954d9.jpg",
   },
   {
     name: "Choco Velvet",
     price: "₹3,800",
-    image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&q=70",
+    image: "/images/photo-1606890737304-57a1ca8a5b62.jpg",
   },
 ];
 
 const instaImages = [
-  "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=400&q=80",
-  "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=400&q=80",
-  "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=400&q=80",
-  "https://images.unsplash.com/photo-1562440499-64c9a111f713?w=400&q=80",
-  "public/5.webp",
-  "https://images.unsplash.com/photo-1587668178277-295251f900ce?w=400&q=80",
+  "/images/photo-1530610476181-d83430b64dcd.jpg",
+  "/images/photo-1495147466023-ac5c588e2e94.jpg",
+  "/images/photo-1470124182917-cc6e71b22ecc.jpg",
+  "/images/photo-1562440499-64c9a111f713.jpg",
+  "/5.webp",
+  "/images/photo-1587668178277-295251f900ce.jpg",
 ];
 
 const Index = () => {
@@ -201,7 +201,7 @@ const Index = () => {
         <ScrollReveal className="relative overflow-hidden group cursor-pointer">
           <Link to="/fleur-delice" className="block h-full">
             <img
-              src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=70"
+              src="/images/photo-1563729784474-d77dbb933a9e.jpg"
               alt="Fleur Delice"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
@@ -224,7 +224,7 @@ const Index = () => {
         <ScrollReveal className="relative overflow-hidden group cursor-pointer" delay={150}>
           <Link to="/tpr-bespoke" className="block h-full">
             <img
-              src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=600&q=70"
+              src="/images/photo-1558636508-e0db3814bd1d.jpg"
               alt="TPR Bespoke"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"

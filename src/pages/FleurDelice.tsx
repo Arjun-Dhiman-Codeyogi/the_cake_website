@@ -9,50 +9,50 @@ const products = [
   {
     name: "Flowers in Bloom",
     price: "₹6,500",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=600&q=70",
+    image: "/images/photo-1618160702438-9b02ab6515c9.jpg",
     badge: "Signature",
   },
   {
     name: "Enchanted Garden",
     price: "₹6,000",
-    image: "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=70",
+    image: "/images/photo-1486427944299-d1955d23e34d.jpg",
     badge: "New",
   },
   {
     name: "Blush Cascade",
     price: "₹5,800",
-    image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&q=70",
+    image: "/images/photo-1571115177098-24ec42ed204d.jpg",
   },
   {
     name: "Rosette Dream",
     price: "₹5,500",
-    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=70",
+    image: "/images/photo-1565958011703-44f9829ba187.jpg",
     badge: "Bestseller",
   },
   {
     name: "Petal Whisper",
     price: "₹5,200",
-    image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=70",
+    image: "/images/photo-1488477181946-6428a0291777.jpg",
   },
   {
     name: "Garden Soirée",
     price: "₹6,200",
-    image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=70",
+    image: "/images/photo-1563729784474-d77dbb933a9e.jpg",
   },
   {
     name: "Cherry Blossom",
     price: "₹4,800",
-    image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=70",
+    image: "/images/photo-1551024601-bec78aea704b.jpg",
   },
   {
     name: "Lavender Haze",
     price: "₹5,000",
-    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=70",
+    image: "/images/photo-1464349095431-e9a21285b5f3.jpg",
   },
   {
     name: "Florentine Delight",
     price: "₹5,600",
-    image: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=600&q=70",
+    image: "/images/photo-1558636508-e0db3814bd1d.jpg",
   },
 ];
 
@@ -65,7 +65,7 @@ const FleurDelice = () => {
       {/* Hero Banner */}
       <section className="relative mt-8 mb-5 h-60 sm:h-80 md:h-96 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=800&q=70"
+          src="/images/photo-1563729784474-d77dbb933a9e.jpg"
           alt="Fleur Delice Collection"
           loading="lazy"
           decoding="async"

@@ -19,48 +19,48 @@ interface Product {
 }
 
 const allProducts: Product[] = [
-  { name: "Flowers in Bloom", price: "\u20B96,500", image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&q=70", badge: "Signature", category: "Fleur Delice" },
-  { name: "Enchanted Garden", price: "\u20B96,000", image: "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=400&q=70", badge: "New", category: "Fleur Delice" },
-  { name: "Rosette Dream", price: "\u20B95,500", image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=70", badge: "Bestseller", category: "Fleur Delice" },
-  { name: "Blush Cascade", price: "\u20B95,800", image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=400&q=70", category: "Fleur Delice" },
-  { name: "Petal Whisper", price: "\u20B95,200", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=70", category: "Fleur Delice" },
-  { name: "Garden Soir\u00E9e", price: "\u20B96,200", image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400&q=70", category: "Fleur Delice" },
-  { name: "Cherry Blossom", price: "\u20B94,800", image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=70", category: "Fleur Delice" },
-  { name: "Lavender Haze", price: "\u20B95,000", image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&q=70", category: "Fleur Delice" },
+  { name: "Flowers in Bloom", price: "\u20B96,500", image: "/images/photo-1618160702438-9b02ab6515c9.jpg", badge: "Signature", category: "Fleur Delice" },
+  { name: "Enchanted Garden", price: "\u20B96,000", image: "/images/photo-1486427944299-d1955d23e34d.jpg", badge: "New", category: "Fleur Delice" },
+  { name: "Rosette Dream", price: "\u20B95,500", image: "/images/photo-1565958011703-44f9829ba187.jpg", badge: "Bestseller", category: "Fleur Delice" },
+  { name: "Blush Cascade", price: "\u20B95,800", image: "/images/photo-1571115177098-24ec42ed204d.jpg", category: "Fleur Delice" },
+  { name: "Petal Whisper", price: "\u20B95,200", image: "/images/photo-1488477181946-6428a0291777.jpg", category: "Fleur Delice" },
+  { name: "Garden Soir\u00E9e", price: "\u20B96,200", image: "/images/photo-1563729784474-d77dbb933a9e.jpg", category: "Fleur Delice" },
+  { name: "Cherry Blossom", price: "\u20B94,800", image: "/images/photo-1551024601-bec78aea704b.jpg", category: "Fleur Delice" },
+  { name: "Lavender Haze", price: "\u20B95,000", image: "/images/photo-1464349095431-e9a21285b5f3.jpg", category: "Fleur Delice" },
 
-  { name: "Classic Chocolate Truffle", price: "\u20B91,800", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=70", badge: "Bestseller", category: "Signature Cakes" },
-  { name: "Red Velvet Royale", price: "\u20B92,200", image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&q=70", badge: "Signature", category: "Signature Cakes" },
-  { name: "Vanilla Bean Dream", price: "\u20B91,600", image: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=400&q=70", category: "Signature Cakes" },
-  { name: "Hazelnut Praline", price: "\u20B92,500", image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&q=70", badge: "New", category: "Signature Cakes" },
-  { name: "Tiramisu Tower", price: "\u20B92,800", image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=70", category: "Signature Cakes" },
-  { name: "Caramel Drizzle", price: "\u20B92,000", image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&q=70", category: "Signature Cakes" },
-  { name: "Pistachio Bliss", price: "\u20B92,400", image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400&q=70", badge: "Popular", category: "Signature Cakes" },
-  { name: "Mango Passion", price: "\u20B91,900", image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=70", category: "Signature Cakes" },
-  { name: "Dark Forest Gateau", price: "\u20B92,100", image: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=400&q=70", category: "Signature Cakes" },
+  { name: "Classic Chocolate Truffle", price: "\u20B91,800", image: "/images/photo-1578985545062-69928b1d9587.jpg", badge: "Bestseller", category: "Signature Cakes" },
+  { name: "Red Velvet Royale", price: "\u20B92,200", image: "/images/photo-1606890737304-57a1ca8a5b62.jpg", badge: "Signature", category: "Signature Cakes" },
+  { name: "Vanilla Bean Dream", price: "\u20B91,600", image: "/images/photo-1535141192574-5d4897c12636.jpg", category: "Signature Cakes" },
+  { name: "Hazelnut Praline", price: "\u20B92,500", image: "/images/photo-1481391319762-47dff72954d9.jpg", badge: "New", category: "Signature Cakes" },
+  { name: "Tiramisu Tower", price: "\u20B92,800", image: "/images/photo-1551024601-bec78aea704b.jpg", category: "Signature Cakes" },
+  { name: "Caramel Drizzle", price: "\u20B92,000", image: "/images/photo-1464349095431-e9a21285b5f3.jpg", category: "Signature Cakes" },
+  { name: "Pistachio Bliss", price: "\u20B92,400", image: "/images/photo-1563729784474-d77dbb933a9e.jpg", badge: "Popular", category: "Signature Cakes" },
+  { name: "Mango Passion", price: "\u20B91,900", image: "/images/photo-1565958011703-44f9829ba187.jpg", category: "Signature Cakes" },
+  { name: "Dark Forest Gateau", price: "\u20B92,100", image: "/images/photo-1588195538326-c5b1e9f80a1b.jpg", category: "Signature Cakes" },
 
-  { name: "Classic Lemon Tart", price: "\u20B9950", image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=400&q=70", badge: "Bestseller", category: "Tarts & Cheesecakes" },
-  { name: "Blueberry Cheesecake", price: "\u20B91,400", image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400&q=70", badge: "Signature", category: "Tarts & Cheesecakes" },
-  { name: "Raspberry Tart", price: "\u20B91,100", image: "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=400&q=70", category: "Tarts & Cheesecakes" },
-  { name: "New York Cheesecake", price: "\u20B91,600", image: "https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=400&q=70", badge: "Popular", category: "Tarts & Cheesecakes" },
-  { name: "Chocolate Ganache Tart", price: "\u20B91,200", image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&q=70", category: "Tarts & Cheesecakes" },
-  { name: "Mango Cheesecake", price: "\u20B91,300", image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=70", badge: "New", category: "Tarts & Cheesecakes" },
-  { name: "Salted Caramel Tart", price: "\u20B91,150", image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&q=70", badge: "Chef's Pick", category: "Tarts & Cheesecakes" },
+  { name: "Classic Lemon Tart", price: "\u20B9950", image: "/images/photo-1519915028121-7d3463d20b13.jpg", badge: "Bestseller", category: "Tarts & Cheesecakes" },
+  { name: "Blueberry Cheesecake", price: "\u20B91,400", image: "/images/photo-1533134242443-d4fd215305ad.jpg", badge: "Signature", category: "Tarts & Cheesecakes" },
+  { name: "Raspberry Tart", price: "\u20B91,100", image: "/images/photo-1464305795204-6f5bbfc7fb81.jpg", category: "Tarts & Cheesecakes" },
+  { name: "New York Cheesecake", price: "\u20B91,600", image: "/images/photo-1524351199678-941a58a3df50.jpg", badge: "Popular", category: "Tarts & Cheesecakes" },
+  { name: "Chocolate Ganache Tart", price: "\u20B91,200", image: "/images/photo-1606890737304-57a1ca8a5b62.jpg", category: "Tarts & Cheesecakes" },
+  { name: "Mango Cheesecake", price: "\u20B91,300", image: "/images/photo-1565958011703-44f9829ba187.jpg", badge: "New", category: "Tarts & Cheesecakes" },
+  { name: "Salted Caramel Tart", price: "\u20B91,150", image: "/images/photo-1481391319762-47dff72954d9.jpg", badge: "Chef's Pick", category: "Tarts & Cheesecakes" },
 
-  { name: "Margherita Pizza", price: "\u20B9450", image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=70", badge: "Bestseller", category: "Pizzas & Burgers" },
-  { name: "Farm Fresh Veggie Pizza", price: "\u20B9550", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=70", badge: "Popular", category: "Pizzas & Burgers" },
-  { name: "Paneer Tikka Pizza", price: "\u20B9620", image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=70", badge: "New", category: "Pizzas & Burgers" },
-  { name: "Classic Veg Burger", price: "\u20B9350", image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=70", badge: "Bestseller", category: "Pizzas & Burgers" },
-  { name: "Spicy Paneer Burger", price: "\u20B9420", image: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&q=70", category: "Pizzas & Burgers" },
+  { name: "Margherita Pizza", price: "\u20B9450", image: "/images/photo-1574071318508-1cdbab80d002.jpg", badge: "Bestseller", category: "Pizzas & Burgers" },
+  { name: "Farm Fresh Veggie Pizza", price: "\u20B9550", image: "/images/photo-1565299624946-b28f40a0ae38.jpg", badge: "Popular", category: "Pizzas & Burgers" },
+  { name: "Paneer Tikka Pizza", price: "\u20B9620", image: "/images/photo-1513104890138-7c749659a591.jpg", badge: "New", category: "Pizzas & Burgers" },
+  { name: "Classic Veg Burger", price: "\u20B9350", image: "/images/photo-1568901346375-23c9450c58cd.jpg", badge: "Bestseller", category: "Pizzas & Burgers" },
+  { name: "Spicy Paneer Burger", price: "\u20B9420", image: "/images/photo-1550547660-d9450f859349.jpg", category: "Pizzas & Burgers" },
 
-  { name: "Signature Chocolate Cake", price: "From \u20B91,500", image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&q=70", badge: "Bestseller", category: "TPR Bespoke" },
-  { name: "Victorian Vanilla", price: "From \u20B91,800", image: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=400&q=70", category: "TPR Bespoke" },
-  { name: "Fondant Fantasy", price: "From \u20B93,500", image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=70", badge: "Custom", category: "TPR Bespoke" },
-  { name: "Tiered Elegance", price: "From \u20B98,000", image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&q=70", category: "TPR Bespoke" },
+  { name: "Signature Chocolate Cake", price: "From \u20B91,500", image: "/images/photo-1606890737304-57a1ca8a5b62.jpg", badge: "Bestseller", category: "TPR Bespoke" },
+  { name: "Victorian Vanilla", price: "From \u20B91,800", image: "/images/photo-1535141192574-5d4897c12636.jpg", category: "TPR Bespoke" },
+  { name: "Fondant Fantasy", price: "From \u20B93,500", image: "/images/photo-1551024601-bec78aea704b.jpg", badge: "Custom", category: "TPR Bespoke" },
+  { name: "Tiered Elegance", price: "From \u20B98,000", image: "/images/photo-1464349095431-e9a21285b5f3.jpg", category: "TPR Bespoke" },
 
-  { name: "Dark Chocolate Truffles", price: "\u20B9850", image: "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=400&q=70", badge: "New", category: "Gourmet" },
-  { name: "Rose Macarons (Box of 6)", price: "\u20B9750", image: "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=400&q=70", badge: "Bestseller", category: "Gourmet" },
-  { name: "Luxury Gift Hamper", price: "\u20B92,500", image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400&q=70", category: "Gourmet" },
-  { name: "Pistachio \u00C9clair", price: "\u20B9380", image: "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=400&q=70", category: "Gourmet" },
+  { name: "Dark Chocolate Truffles", price: "\u20B9850", image: "/images/photo-1548907040-4baa42d10919.jpg", badge: "New", category: "Gourmet" },
+  { name: "Rose Macarons (Box of 6)", price: "\u20B9750", image: "/images/photo-1558326567-98ae2405596b.jpg", badge: "Bestseller", category: "Gourmet" },
+  { name: "Luxury Gift Hamper", price: "\u20B92,500", image: "/images/photo-1549465220-1a8b9238cd48.jpg", category: "Gourmet" },
+  { name: "Pistachio \u00C9clair", price: "\u20B9380", image: "/images/photo-1530610476181-d83430b64dcd.jpg", category: "Gourmet" },
 ];
 
 const trendingNames = [
@@ -246,7 +246,7 @@ const SearchPage = () => {
             {/* ── Hero Banner ── */}
             <div className="rounded-2xl sm:rounded-3xl overflow-hidden mb-8 relative h-36 sm:h-48">
               <img
-                src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=1200&q=70"
+                src="/images/photo-1558636508-e0db3814bd1d.jpg"
                 alt="Explore"
                 loading="lazy"
                 decoding="async"
