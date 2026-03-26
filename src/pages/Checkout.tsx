@@ -246,7 +246,7 @@ const Checkout = () => {
               </section>
 
               {/* ── 2. Delivery ── */}
-              <section className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-burgundy/5" style={{ animationDelay: "0.1s", animationFillMode: "both" }}>
+              <section className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-burgundy/5" style={{ animation: "fadeInUp 0.7s ease-out both 0.1s" }}>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center">
                     <Truck className="w-5 h-5 text-burgundy" />
@@ -317,7 +317,7 @@ const Checkout = () => {
               </section>
 
               {/* ── 3. Payment ── */}
-              <section className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-burgundy/5" style={{ animationDelay: "0.2s", animationFillMode: "both" }}>
+              <section className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-burgundy/5" style={{ animation: "fadeInUp 0.7s ease-out both 0.2s" }}>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center">
                     <CreditCard className="w-5 h-5 text-burgundy" />
@@ -359,7 +359,7 @@ const Checkout = () => {
               </section>
 
               {/* ── 4. Billing Address ── */}
-              <section className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-burgundy/5" style={{ animationDelay: "0.3s", animationFillMode: "both" }}>
+              <section className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-burgundy/5" style={{ animation: "fadeInUp 0.7s ease-out both 0.3s" }}>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center">
                     <Building2 className="w-5 h-5 text-burgundy" />

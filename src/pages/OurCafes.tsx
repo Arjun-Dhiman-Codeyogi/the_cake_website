@@ -65,8 +65,8 @@ const GallerySlider = ({ images }: { images: string[] }) => {
                     : `rotateY(${pos < 0 ? 12 : -12}deg) scale(0.85)`,
                   transformStyle: "preserve-3d",
                   zIndex: isActive ? 10 : 5,
-                  opacity: isActive ? 1 : 0.55,
-                  filter: isActive ? "none" : "brightness(0.8)",
+                  opacity: isActive ? 1 : 0.65,
+                  filter: isActive ? "none" : "brightness(0.85)",
                 }}
               >
                 <div

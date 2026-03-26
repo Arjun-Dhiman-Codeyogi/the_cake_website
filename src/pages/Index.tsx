@@ -109,13 +109,19 @@ const Index = () => {
         ))}
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <p className="font-lato  bolder text-sm tracking-[0.35em] uppercase text-blush mb-4 animate-fade-in-up">
+          <p className="font-lato bolder text-sm tracking-[0.35em] uppercase text-blush mb-4 animate-fade-in-up">
             Mumbai's Luxury Patisserie
           </p>
-          <h1 className="font-playfair text-3xl sm:text-5xl md:text-7xl text-primary-foreground mb-3 animate-fade-in-up">
+          <h1
+            key={`headline-${current}`}
+            className="font-playfair text-3xl sm:text-5xl md:text-7xl text-primary-foreground mb-3 animate-fade-in-up"
+          >
             {heroSlides[current].headline}
           </h1>
-          <h2 className="font-playfair italic text-xl sm:text-3xl md:text-5xl text-blush mb-8 animate-fade-in-up">
+          <h2
+            key={`sub-${current}`}
+            className="font-playfair italic text-xl sm:text-3xl md:text-5xl text-blush mb-8 animate-fade-in-up"
+          >
             {heroSlides[current].sub}
           </h2>
           <Link

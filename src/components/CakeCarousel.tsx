@@ -161,9 +161,9 @@ const CakeCarousel = () => {
                       transform: `translateX(${translateX}) rotateY(${pos * -12}deg) scale(${isActive ? 1.05 : 0.82})`,
                       transformStyle: "preserve-3d",
                       zIndex: isActive ? 10 : 5,
-                      opacity: isActive ? 1 : 0.55,
-                      filter: isActive ? "none" : "brightness(0.8)",
-                      willChange: isActive ? "contents" : "auto",
+                      opacity: isActive ? 1 : 0.65,
+                      filter: isActive ? "none" : "brightness(0.85)",
+                      willChange: isActive ? "transform, opacity" : "auto",
                     }}
                   >
                     <div
@@ -182,7 +182,8 @@ const CakeCarousel = () => {
                         alt={cake.name}
                         className="w-full h-full object-cover"
                         loading={isActive ? "eager" : "lazy"}
-                        decoding="async"
+                        decoding="sync"
+                        style={{ backfaceVisibility: "hidden" }}
                       />
 
                       {/* Gradient overlay at bottom */}
