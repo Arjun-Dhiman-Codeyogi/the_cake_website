@@ -160,8 +160,8 @@ const Cart = () => {
   const formattedTotal = totalPrice.toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   return (
-    <div className="min-h-screen mt-14 bg-white">
-      <AnnouncementBar />
+    <div className="min-h-screen mt-11 bg-white">
+      {/* <AnnouncementBar /> */}
       <Navbar />
 
       {/* ── HERO ── */}
