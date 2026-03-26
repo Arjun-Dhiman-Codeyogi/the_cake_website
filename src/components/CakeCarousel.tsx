@@ -40,7 +40,7 @@ const framePath = (folder: string, i: number) =>
 const CakeCarousel = () => {
   const [active, setActive] = useState(0);
   const [frameIdx, setFrameIdx] = useState(0); // index into frameIndices
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [loadedCakes, setLoadedCakes] = useState<Set<number>>(new Set());
   const containerRef = useRef<HTMLDivElement>(null);
   const animFrameRef = useRef<number | null>(null);
@@ -134,7 +134,7 @@ const CakeCarousel = () => {
 
           {/* Cards Container */}
           <div className="flex items-center justify-center w-full" style={{ perspective: "1400px" }}>
-            <div className="relative flex items-center justify-center w-full max-w-5xl" style={{ minHeight: "min(540px, 78vw)" }}>
+            <div className="relative flex items-center justify-center w-full max-w-5xl" style={{ minHeight: "min(520px, 78vw)" }}>
               {cakes.map((cake, i) => {
                 const isActive = i === active;
                 const pos = getPosition(i);
@@ -157,7 +157,7 @@ const CakeCarousel = () => {
                     className="absolute cursor-pointer transition-all duration-700 ease-out left-1/2"
                     style={{
                       width: isActive ? "min(368px, 57vw)" : "min(268px, 39vw)",
-                      height: isActive ? "min(502px, 74vw)" : "min(392px, 57vw)",
+                      height: isActive ? "min(482px, 74vw)" : "min(372px, 57vw)",
                       transform: `translateX(${translateX}) rotateY(${pos * -12}deg) scale(${isActive ? 1.05 : 0.82})`,
                       transformStyle: "preserve-3d",
                       zIndex: isActive ? 10 : 5,
