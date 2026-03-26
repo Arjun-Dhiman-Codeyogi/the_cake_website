@@ -7,12 +7,12 @@ import WaveDivider from "@/components/WaveDivider";
 import { MapPin, Clock, ExternalLink } from "lucide-react";
 
 const gallery = [
-  "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80",
-  "https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80",
-  "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&q=80",
-  "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80",
-  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80",
-  "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80",
+  "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=70",
+  "https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=70",
+  "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&q=70",
+  "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=70",
+  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=70",
+  "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=70",
 ];
 
 /* ── 3D Carousel Gallery (like CakeCarousel) ── */
@@ -81,6 +81,8 @@ const GallerySlider = ({ images }: { images: string[] }) => {
                   <img
                     src={images[idx]}
                     alt={`Café ambiance ${idx + 1}`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
 
@@ -125,8 +127,10 @@ const OurCafes = () => {
       {/* Hero */}
       <section className="relative h-60 sm:h-80 md:h-[500px] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1600&q=85"
+          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=70"
           alt="The Pink Rosette Café"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover ken-burns"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-burgundy/50 to-burgundy/70 flex flex-col items-center justify-center text-center px-6">
@@ -151,6 +155,8 @@ const OurCafes = () => {
               <img
                 src="public/cafe.webp"
                 alt="Fort Café Interior"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>

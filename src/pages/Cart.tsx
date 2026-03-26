@@ -145,10 +145,10 @@ const DeliveryCalendar = ({
 
 /* ─── Suggested products ─── */
 const suggestedProducts = [
-  { name: "Rose Macarons (Box of 6)", price: "\u20B9750", image: "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=400&q=80", badge: "Bestseller", category: "Gourmet" },
-  { name: "Classic Chocolate Truffle", price: "\u20B91,800", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80", badge: "Bestseller", category: "Signature Cakes" },
-  { name: "Blueberry Cheesecake", price: "\u20B91,400", image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400&q=80", badge: "Signature", category: "Tarts & Cheesecakes" },
-  { name: "Red Velvet Royale", price: "\u20B92,200", image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&q=80", badge: "Signature", category: "Signature Cakes" },
+  { name: "Rose Macarons (Box of 6)", price: "\u20B9750", image: "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=400&q=70", badge: "Bestseller", category: "Gourmet" },
+  { name: "Classic Chocolate Truffle", price: "\u20B91,800", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=70", badge: "Bestseller", category: "Signature Cakes" },
+  { name: "Blueberry Cheesecake", price: "\u20B91,400", image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400&q=70", badge: "Signature", category: "Tarts & Cheesecakes" },
+  { name: "Red Velvet Royale", price: "\u20B92,200", image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&q=70", badge: "Signature", category: "Signature Cakes" },
 ];
 
 /* ─── CART PAGE ─── */
@@ -239,7 +239,7 @@ const Cart = () => {
                         <div className="flex gap-4 p-4 rounded-2xl bg-white border border-blush/25 shadow-sm hover:shadow-md transition-all duration-300">
                           {/* Product image */}
                           <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden shrink-0 shadow-sm">
-                            <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                            <img src={item.image} alt={item.name} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                           </div>
 
                           {/* Product details */}
@@ -492,6 +492,8 @@ const Cart = () => {
                     <img
                       src={p.image}
                       alt={p.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     {p.badge && (

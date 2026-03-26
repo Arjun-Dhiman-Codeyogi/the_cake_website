@@ -9,51 +9,51 @@ const tarts = [
   {
     name: "Classic Lemon Tart",
     price: "₹950",
-    image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=600&q=70",
     badge: "Bestseller",
   },
   {
     name: "Blueberry Cheesecake",
     price: "₹1,400",
-    image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&q=70",
     badge: "Signature",
   },
   {
     name: "Raspberry Tart",
     price: "₹1,100",
-    image: "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=600&q=70",
   },
   {
     name: "New York Cheesecake",
     price: "₹1,600",
-    image: "https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=600&q=70",
     badge: "Popular",
   },
   {
     name: "Chocolate Ganache Tart",
     price: "₹1,200",
-    image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=600&q=70",
   },
   {
     name: "Mango Cheesecake",
     price: "₹1,300",
-    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=70",
     badge: "New",
   },
   {
     name: "Passion Fruit Tart",
     price: "₹1,050",
-    image: "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=70",
   },
   {
     name: "Baked Strawberry Cheesecake",
     price: "₹1,500",
-    image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&q=70",
   },
   {
     name: "Salted Caramel Tart",
     price: "₹1,150",
-    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=600&q=70",
     badge: "Chef's Pick",
   },
 ];
@@ -67,8 +67,10 @@ const SignatureTarts = () => {
       {/* Hero */}
       <section className="relative mb-6 h-52 sm:h-80 md:h-[420px] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=1600&q=85"
+          src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=800&q=70"
           alt="Signature Tarts & Cheesecakes"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover ken-burns"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-mauve/50 via-mauve/35 to-burgundy/65 flex flex-col items-center justify-center text-center">

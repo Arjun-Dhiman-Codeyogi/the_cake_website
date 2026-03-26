@@ -11,22 +11,22 @@ import CakeCarousel from "@/components/CakeCarousel";
 
 const heroSlides = [
   {
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1600&q=85",
+    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=70",
     headline: "Crafted with Love.",
     sub: "Since 2018.",
   },
   {
-    image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1600&q=85",
+    image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=70",
     headline: "Artisan Patisserie.",
     sub: "Mumbai's Finest.",
   },
   {
-    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=1600&q=85",
+    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=70",
     headline: "Fleur Delice.",
     sub: "Flowers in Every Bite.",
   },
   {
-    image: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=1600&q=85",
+    image: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=800&q=70",
     headline: "Bespoke Creations.",
     sub: "Made Just for You.",
   },
@@ -36,34 +36,34 @@ const signatures = [
   {
     name: "Flowers in Bloom",
     price: "₹6,500",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&q=70",
     badge: "Signature",
   },
   {
     name: "Enchanted Garden",
     price: "₹6,000",
-    image: "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=400&q=70",
   },
   {
     name: "Rosette Dream",
     price: "₹5,500",
-    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=70",
     badge: "Bestseller",
   },
   {
     name: "Blush Cascade",
     price: "₹5,800",
-    image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=400&q=70",
   },
   {
     name: "Caramel Luxe",
     price: "₹4,200",
-    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&q=70",
   },
   {
     name: "Choco Velvet",
     price: "₹3,800",
-    image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&q=70",
   },
 ];
 
@@ -101,6 +101,8 @@ const Index = () => {
               src={slide.image}
               alt={slide.headline}
               className="w-full h-full object-cover ken-burns"
+              loading={i === 0 ? "eager" : "lazy"}
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-burgundy/50 via-burgundy/30 to-burgundy/60" />
           </div>
@@ -193,9 +195,11 @@ const Index = () => {
         <ScrollReveal className="relative overflow-hidden group cursor-pointer">
           <Link to="/fleur-delice" className="block h-full">
             <img
-              src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=900&q=85"
+              src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=70"
               alt="Fleur Delice"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-mauve/50 group-hover:bg-mauve/60 transition-colors duration-500 flex flex-col items-center justify-center text-center p-8">
               <p className="font-lato text-xs tracking-[0.3em] uppercase text-blush mb-3">
@@ -214,9 +218,11 @@ const Index = () => {
         <ScrollReveal className="relative overflow-hidden group cursor-pointer" delay={150}>
           <Link to="/tpr-bespoke" className="block h-full">
             <img
-              src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=900&q=85"
+              src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=600&q=70"
               alt="TPR Bespoke"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-burgundy/55 group-hover:bg-burgundy/65 transition-colors duration-500 flex flex-col items-center justify-center text-center p-8">
               <p className="font-lato text-xs tracking-[0.3em] uppercase text-blush mb-3">
@@ -294,6 +300,8 @@ const Index = () => {
                     src={src}
                     alt="Instagram"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-burgundy/0 group-hover:bg-burgundy/40 transition-all duration-400 flex items-center justify-center">
                     <span className="text-primary-foreground font-lato text-xs tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">

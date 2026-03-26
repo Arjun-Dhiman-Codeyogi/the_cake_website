@@ -9,51 +9,51 @@ const cakes = [
   {
     name: "Classic Chocolate Truffle",
     price: "₹1,800",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=70",
     badge: "Bestseller",
   },
   {
     name: "Red Velvet Royale",
     price: "₹2,200",
-    image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=600&q=70",
     badge: "Signature",
   },
   {
     name: "Vanilla Bean Dream",
     price: "₹1,600",
-    image: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=600&q=70",
   },
   {
     name: "Hazelnut Praline",
     price: "₹2,500",
-    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=600&q=70",
     badge: "New",
   },
   {
     name: "Tiramisu Tower",
     price: "₹2,800",
-    image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=70",
   },
   {
     name: "Caramel Drizzle",
     price: "₹2,000",
-    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=70",
   },
   {
     name: "Pistachio Bliss",
     price: "₹2,400",
-    image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=70",
     badge: "Popular",
   },
   {
     name: "Mango Passion",
     price: "₹1,900",
-    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=70",
   },
   {
     name: "Dark Forest Gateau",
     price: "₹2,100",
-    image: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=600&q=70",
   },
 ];
 
@@ -66,8 +66,10 @@ const SignatureCakes = () => {
       {/* Hero */}
       <section className="relative h-52 mb-6 sm:h-80 md:h-[420px] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1600&q=85"
+          src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=70"
           alt="Signature Cakes"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover ken-burns"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-burgundy/50 via-burgundy/40 to-burgundy/70 flex flex-col items-center justify-center text-center">

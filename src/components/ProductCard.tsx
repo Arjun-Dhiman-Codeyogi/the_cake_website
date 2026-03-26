@@ -48,6 +48,8 @@ const ProductCard = ({ name, price, image, badge, slug = "#", category = "" }: P
           src={image}
           alt={name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          loading="lazy"
+          decoding="async"
         />
         {badge && (
           <span className="absolute top-3 left-3 bg-mauve text-accent-foreground text-xs font-lato tracking-widest px-3 py-1 rounded-full shadow-md">

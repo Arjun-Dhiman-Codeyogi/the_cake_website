@@ -28,25 +28,25 @@ const occasions = [
     icon: Cake,
     title: "Birthdays",
     desc: "Our team is here to help you personalise your birthday cake from start to finish, including selecting flavours and creating a one-of-a-kind design!",
-    image: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=600&q=70",
   },
   {
     icon: Heart,
     title: "Weddings & Anniversaries",
     desc: "A cake serves as the focal point for your celebrations. Allow us to assist in customising something that meets your criteria & makes your special occasion even more sweet!",
-    image: "https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=600&q=70",
   },
   {
     icon: Baby,
     title: "Baby Shower / Announcements",
     desc: "Personal occasions like a baby announcement require more attention to detail and we're here for you! Our baby shower cakes offer limitless opportunities for customisations, be it names, dates or special messages!",
-    image: "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=600&q=70",
   },
   {
     icon: Palette,
     title: "Themed Cakes",
     desc: "Experience the magic of themed cakes that turn your sweet dreams into edible works of art. Each cake is carefully crafted with attention to every detail, bringing your unique vision to life!",
-    image: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=600&q=70",
   },
 ];
 
@@ -60,8 +60,10 @@ const Customise = () => {
       <section className="grid md:grid-cols-2 min-h-0 md:min-h-[70vh]">
         <div className="relative overflow-hidden h-48 sm:h-72 md:h-[100vh]">
           <img
-            src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=900&q=85"
+            src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=70"
             alt="Bespoke Cake"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover ken-burns"
           />
           <div className="absolute inset-0 bg-burgundy/40" />
@@ -138,6 +140,8 @@ const Customise = () => {
                     <img
                       src={item.image}
                       alt={item.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-burgundy/60 to-transparent" />

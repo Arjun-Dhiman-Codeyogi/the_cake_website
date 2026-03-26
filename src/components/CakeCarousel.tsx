@@ -1,8 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const FRAME_COUNT = 200;
-const FRAME_INTERVAL = 50; // ms per frame for animation
+const TOTAL_FRAMES = 200;
+const FRAMES_TO_USE = 50; // Use every 4th frame for smooth animation with fewer loads
+const FRAME_STEP = Math.floor(TOTAL_FRAMES / FRAMES_TO_USE); // = 4
+const FRAME_INTERVAL = 80; // ms per frame (slower = fewer repaints, smoother on slow devices)
 
 const cakes = [
   {
@@ -28,40 +30,89 @@ const cakes = [
   },
 ];
 
-// Generate frame paths
+// Frame indices we'll actually use (every 4th frame)
+const frameIndices = Array.from({ length: FRAMES_TO_USE }, (_, i) => i * FRAME_STEP + 1);
+
 const pad = (n: number) => String(n).padStart(3, "0");
 const framePath = (folder: string, i: number) =>
   `${folder}/ezgif-frame-${pad(i)}.jpg`;
 
 const CakeCarousel = () => {
   const [active, setActive] = useState(0);
-  const [frame, setFrame] = useState(1);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [frameIdx, setFrameIdx] = useState(0); // index into frameIndices
+  const [isVisible, setIsVisible] = useState(false);
+  const [loadedCakes, setLoadedCakes] = useState<Set<number>>(new Set());
+  const containerRef = useRef<HTMLDivElement>(null);
+  const animFrameRef = useRef<number | null>(null);
+  const lastTimeRef = useRef(0);
 
-  // Animate frames
+  // Observe visibility - only animate when in viewport
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setFrame((f) => (f >= FRAME_COUNT ? 1 : f + 1));
-    }, FRAME_INTERVAL);
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
-  // Preload first few frames of each cake
+  // Preload frames for active cake only (progressive loading)
   useEffect(() => {
-    cakes.forEach((cake) => {
-      for (let i = 1; i <= 5; i++) {
+    if (!isVisible) return;
+    if (loadedCakes.has(active)) return;
+
+    const cake = cakes[active];
+    let loaded = 0;
+    const batchSize = 5; // Load 5 at a time to avoid network congestion
+
+    const loadBatch = (startIdx: number) => {
+      const end = Math.min(startIdx + batchSize, frameIndices.length);
+      for (let i = startIdx; i < end; i++) {
         const img = new Image();
-        img.src = framePath(cake.folder, i);
+        img.onload = () => {
+          loaded++;
+          if (loaded >= frameIndices.length) {
+            setLoadedCakes((prev) => new Set(prev).add(active));
+          }
+        };
+        img.onerror = () => { loaded++; };
+        img.src = framePath(cake.folder, frameIndices[i]);
       }
-    });
-  }, []);
+      if (end < frameIndices.length) {
+        setTimeout(() => loadBatch(end), 100);
+      }
+    };
+
+    loadBatch(0);
+  }, [active, isVisible, loadedCakes]);
+
+  // Animate using requestAnimationFrame (more efficient than setInterval)
+  const animate = useCallback(
+    (time: number) => {
+      if (time - lastTimeRef.current >= FRAME_INTERVAL) {
+        lastTimeRef.current = time;
+        setFrameIdx((f) => (f + 1) % FRAMES_TO_USE);
+      }
+      animFrameRef.current = requestAnimationFrame(animate);
+    },
+    []
+  );
+
+  useEffect(() => {
+    if (isVisible) {
+      animFrameRef.current = requestAnimationFrame(animate);
+    }
+    return () => {
+      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
+    };
+  }, [isVisible, animate]);
 
   const prev = () => setActive((a) => (a === 0 ? cakes.length - 1 : a - 1));
   const next = () => setActive((a) => (a === cakes.length - 1 ? 0 : a + 1));
 
-  // Position: -1 = left, 0 = center, 1 = right
   const getPosition = (i: number): number => {
     if (i === active) return 0;
     const diff = ((i - active) + cakes.length) % cakes.length;
@@ -69,7 +120,7 @@ const CakeCarousel = () => {
   };
 
   return (
-    <section className="py-10 mt-10 sm:py-16 lg:py-20 px-4 sm:px-6">
+    <section ref={containerRef} className="py-10 mt-10 sm:py-16 lg:py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <div className="relative flex items-center justify-center">
           {/* Left Arrow */}
@@ -88,12 +139,16 @@ const CakeCarousel = () => {
                 const isActive = i === active;
                 const pos = getPosition(i);
 
-                // Active: dead center. Side cards offset by 60% of container width
                 const translateX = pos === 0
-                  ? "-50%"                       // true center
+                  ? "-50%"
                   : pos === -1
-                    ? "calc(-50% - min(200px, 32vw))"  // left
-                    : "calc(-50% + min(200px, 32vw))"; // right
+                    ? "calc(-50% - min(200px, 32vw))"
+                    : "calc(-50% + min(200px, 32vw))";
+
+                // Active card shows animated frame, inactive shows frame 1
+                const currentFrame = isActive
+                  ? frameIndices[frameIdx]
+                  : 1;
 
                 return (
                   <div
@@ -108,6 +163,7 @@ const CakeCarousel = () => {
                       zIndex: isActive ? 10 : 5,
                       opacity: isActive ? 1 : 0.55,
                       filter: isActive ? "none" : "brightness(0.8)",
+                      willChange: isActive ? "contents" : "auto",
                     }}
                   >
                     <div
@@ -122,9 +178,11 @@ const CakeCarousel = () => {
                     >
                       {/* Animated cake image — only active card animates */}
                       <img
-                        src={framePath(cake.folder, isActive ? frame : 1)}
+                        src={framePath(cake.folder, currentFrame)}
                         alt={cake.name}
                         className="w-full h-full object-cover"
+                        loading={isActive ? "eager" : "lazy"}
+                        decoding="async"
                       />
 
                       {/* Gradient overlay at bottom */}

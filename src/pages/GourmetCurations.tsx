@@ -8,22 +8,22 @@ import WaveDivider from "@/components/WaveDivider";
 const categories = [
   {
     name: "Artisan Chocolates",
-    image: "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=600&q=70",
     count: "12 Products",
   },
   {
     name: "Macarons",
-    image: "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=600&q=70",
     count: "8 Products",
   },
   {
     name: "Gift Hampers",
-    image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=70",
     count: "6 Products",
   },
   {
     name: "Tarts & Mignardises",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=70",
     count: "10 Products",
   },
 ];
@@ -32,34 +32,34 @@ const products = [
   {
     name: "Dark Chocolate Truffles",
     price: "₹850",
-    image: "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=600&q=70",
     badge: "New",
   },
   {
     name: "Rose Macarons (Box of 6)",
     price: "₹750",
-    image: "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=600&q=70",
     badge: "Bestseller",
   },
   {
     name: "Luxury Gift Hamper",
     price: "₹2,500",
-    image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=70",
   },
   {
     name: "Strawberry Tart",
     price: "₹450",
-    image: "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=600&q=70",
   },
   {
     name: "Salted Caramel Bonbons",
     price: "₹650",
-    image: "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=600&q=70",
   },
   {
     name: "Pistachio Éclair",
     price: "₹380",
-    image: "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=600&q=70",
   },
 ];
 
@@ -72,8 +72,10 @@ const GourmetCurations = () => {
       {/* Hero */}
       <section className="relative h-52 sm:h-72 md:h-96 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1484659619207-9165d119dafe?w=1600&q=85"
+          src="https://images.unsplash.com/photo-1484659619207-9165d119dafe?w=800&q=70"
           alt="Gourmet Curations"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover ken-burns"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-mauve/50 to-burgundy/65 flex flex-col items-center justify-center text-center">
@@ -106,6 +108,8 @@ const GourmetCurations = () => {
                 <img
                   src={cat.image}
                   alt={cat.name}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-32 sm:h-44 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-burgundy/50 group-hover:bg-burgundy/65 transition-colors flex flex-col items-center justify-center text-center p-4">
